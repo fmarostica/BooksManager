@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="BooksManager.Main" %>
+<!DOCTYPE html>
+<html lang="es">
+    <head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title><%: Page.Title %></title>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/app.js" defer></script>
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div id="frmLogin" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input id="txtUser" type="text" class="form-control" placeholder="Usuario o correo" />
+                        </div>
+                        <div class="form-group">
+                            <input id="txtPass" type="password" class="form-control" placeholder="Clave" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnLogin" class="btn btn-primary">Ingresar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="navbar-brand">
+                    Books Inc.
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="menu" class="navbar-collapse collapse">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/books.aspx">Libros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cart.aspx">Pedido</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact.aspx">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#frmLogin">Ingresar</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container-fluid py-4">
+            <asp:ContentPlaceHolder ID="ContentBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        <footer class="py-4 text-center bg-dark">
+            &COPY; 2019 The books company inc. All rights reserved
+        </footer>
+    </body>
+</html>

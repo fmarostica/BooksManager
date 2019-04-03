@@ -1,0 +1,23 @@
+﻿body {
+}
+
+.book-box {
+
+}
+
+.book-box .image{
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.book-box .title{
+    font-size: 1rem;
+    text-align: center;
+    height: 70px;
+    padding: 10px 0px;
+}
+
+footer{
+    color: white;
+}
